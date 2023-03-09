@@ -7,17 +7,17 @@
 
     <div id-"mymodal" role-"dialog">
         <h4>Add Employee</h4>
-        <form action="" method-"Post">
+        <form action="{{url_for('insert')}}" method="post">
             <label1>Name:</label1>
             <input type="text" name="name" required="1">
             <label1>Email</label1>
             <input type="email" name="email" required="1">
             <label1>Phone:</label1>
             <input type="number" name="phone" required="1">
+            <button type ="submit" method-'post'>Add Employee</button>
         </form>
-        <button type ="submit">Add Employee</button>
+        
     </div>
-
     
     <button type = "button" onclick="window.location.replace('/')">Back</button></h2> 
 

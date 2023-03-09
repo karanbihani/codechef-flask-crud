@@ -15,18 +15,20 @@
             <th>Phone No</th>
             <th>Action</th>
         </tr>
+        
+        {% for row in employees%}
 
         <tr>
-            <td>1</td>
-            <td>Karan</td>
-            <td>kar@gmail.com</td>
-            <td>9884361679</td>
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.phone}}</td>
             <td>
-                <a href="/editemp/" data-toggle="" data-target="">Edit</a>
-                <a href=" " data-toggle="" data-target="" onclick="return confirm('Are You Sure You Want to Delete?')">Delete</a>
+                <a href="/editemp/{{row.id}}" >Edit</a>
+                <a href="/delete/{{row.id}}"  onclick="return confirm('Are You Sure You Want to Delete?')">Delete</a>
             </td>
          </tr>
-        
+        {% endfor %}
     </table>
 
 {%endblock%}

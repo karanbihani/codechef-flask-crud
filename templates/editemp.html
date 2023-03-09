@@ -5,21 +5,21 @@
 
 {%block body%} 
 
-    <div id-"mymodal" role-"dialog">
+    <div >
         <h4>Edit Employee</h4>
-        <form action="" method-"Post">
+        <form action="{{url_for('update')}}" method="Post">
             <label1>Name:</label1>
             
-            <input type="hidden" name="id" value = "id">
-            <input type="text" name="name" value = "Karan">
+            <input type="hidden" name="id" value = "{{my_data.id}}">
+            <input type="text" name="name" value = {{my_data.name}}>
             
             <label1>Email</label1>
-            <input type="email" name="email" value = "kar@gmail.com">
+            <input type="email" name="email" value = {{my_data.email}}>
             <label1>Phone:</label1>
-            <input type="number" name="phone" value="9884361679">
+            <input type="number" name="phone" value={{my_data.phone}}>
+            <button type ="submit">Edit Employee</button>
         </form>
-        <button type ="submit">Edit Employee</button>
-    </div>
+            </div>
     
     <button type = "button" onclick="window.location.replace('/')">Back</button></h2> 
 
