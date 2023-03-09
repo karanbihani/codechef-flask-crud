@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{%include 'header.html'%}
+
+{%block title%} Home {%endblock%}
+
+{%block body%} 
+
+    <h2> Manage <b>Employees</b> <button type = "button" onclick="window.location.replace('/newemp/')">Add New Employees</button></h2> 
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>MailID</th>
+            <th>Phone No</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Karan</td>
+            <td>kar@gmail.com</td>
+            <td>9884361679</td>
+            <td>
+                <a href="/editemp/" data-toggle="" data-target="">Edit</a>
+                <a href=" " data-toggle="" data-target="" onclick="return confirm('Are You Sure You Want to Delete?')">Delete</a>
+            </td>
+         </tr>
+        
+    </table>
+
+{%endblock%}
+

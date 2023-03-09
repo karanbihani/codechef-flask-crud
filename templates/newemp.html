@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{%include 'header.html'%}
+
+{%block title%} Home {%endblock%}
+
+{%block body%} 
+
+    <div id-"mymodal" role-"dialog">
+        <h4>Add Employee</h4>
+        <form action="" method-"Post">
+            <label1>Name:</label1>
+            <input type="text" name="name" required="1">
+            <label1>Email</label1>
+            <input type="email" name="email" required="1">
+            <label1>Phone:</label1>
+            <input type="number" name="phone" required="1">
+        </form>
+        <button type ="submit">Add Employee</button>
+    </div>
+
+    
+    <button type = "button" onclick="window.location.replace('/')">Back</button></h2> 
+
+
+{%endblock%}
